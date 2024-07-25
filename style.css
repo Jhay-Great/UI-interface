@@ -27,6 +27,12 @@ main,
 footer {
     width: 100%;
 }
+.slide-images{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    width: 100%;
+}
 header
 
 footer {
