@@ -32,3 +32,9 @@ header
 footer {
     background-color: red;
 }
+
+
+/* UTILITY CLASSES */
+.hidden {
+    display: none;
+}
