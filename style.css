@@ -2,9 +2,13 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
 :root {
+    --color-white: #fff;
+    --color-black: #000;
 
+    --default-font-color: var(--color-black);
 }
 
 body {
-    
+    width: 100%;
+
 }
