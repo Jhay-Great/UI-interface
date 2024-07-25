@@ -156,7 +156,7 @@ nav:hover {
 .left-navlink .dropdown {
     font-size: 1rem;
 }
-nav img {
+nav img, nav svg {
     width: 20px;
     height: 20px;
     aspect-ratio: 1;
@@ -217,6 +217,21 @@ nav img {
 .right-navlink button:active {
     border: transparent;
     background-color: #008;
+}
+
+/* animating dropdown arrow */
+.left-navlink button:hover svg {
+  /* transform: rotate(360deg); */
+  animation: rotate 1s 1 ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate();
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
