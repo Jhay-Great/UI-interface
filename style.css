@@ -76,11 +76,16 @@ nav img {
     color: var(--color-black);
     font-size: .8rem;
 }
+.right-navlink {
+    display: flex;
+    flex-direction: row-reverse;
+}
 .right-navlink button {
     border: transparent;
     border-radius: 30px;
     padding: 1rem 2rem;
     background-color: #008;
+    margin-right: 2rem;
 
     font-weight: 600;
     color: var(--color-white);
