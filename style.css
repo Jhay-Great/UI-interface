@@ -33,7 +33,70 @@ footer {
     background-color: red;
     width: 100%;
 }
-header
+/* HEADER STYLES */
+header {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+}
+.left-navlink, .middle-navlink, .right-navlink {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.left-navlink button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+nav img {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: .8rem;
+}
+.right-navlink button {
+    border: transparent;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    background-color: #008;
+
+    font-weight: 600;
+    color: var(--color-white);
+
+}
+.right-navlink button:hover {
+    background-color: #008a;
+    cursor: pointer;
+    border-right: 1px solid black;
+    border-bottom: 3px solid black;
+
+}
+.right-navlink button:active {
+    border: transparent;
+    background-color: #008;
+}
 
 footer {
     background-color: red;
