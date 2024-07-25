@@ -1,3 +1,6 @@
+/* imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;500;600&display=swap');
+
 /* default browser reset */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
@@ -27,8 +30,216 @@ main,
 footer {
     width: 100%;
 }
-header
+
+
+.slide-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide-images {
+    display: flex;
+    gap: 10px;
+    height: 400px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in;
+  }
+  
+  .image-wrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .view-btn {
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .view-btn:hover {
+    background-color: none;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  .enlarged {
+    width: 400px;
+    height: 400px;
+    z-index: 10;
+  }
+/* HEADER STYLES */
+header {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+
+    box-shadow: 0 2px 15px #0000;
+    margin-bottom: 4rem;
+
+    transition: all 900ms ease;
+    height: 60px;
+}
+nav:hover {
+  box-shadow: 0 2px 15px #0002;
+}
+.left-navlink, .middle-navlink, .right-navlink {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.left-navlink {
+    gap: 2rem;
+}
+.left-navlink button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+.left-navlink button,
+.left-navlink ul a,
+.left-navlink .dropdown {
+    font-size: 1rem;
+}
+nav img, nav svg {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-black);
+    /* font-size: .8rem; */
+}
+.left-navlink a:hover {
+  color: gray;
+  transition: all 500ms ease;
+}
+.middle-navlink {
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    font-family: 'Caveat';
+    font-weight: 700;
+}
+.logo:hover {
+  letter-spacing: 1.2px;
+  font-weight: 900;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+}
+.right-navlink {
+    flex-direction: row-reverse;
+}
+.right-navlink button {
+    border: transparent;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    background-color: #008;
+
+    border-right: 1px solid transparent;
+    border-bottom: 3px solid transparent;
+
+    font-weight: 600;
+    color: var(--color-white);
+
+}
+.right-navlink button:hover {
+    background-color: #008a;
+    cursor: pointer;
+    border-right-color:  black;
+    border-bottom-color: black;
+    transition: all 300ms ease;
+
+}
+.right-navlink button:active {
+    border: transparent;
+    background-color: #008;
+}
+
+/* animating dropdown arrow */
+.left-navlink button:hover svg {
+  /* transform: rotate(360deg); */
+  animation: rotate 1s 1 ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate();
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 footer {
     background-color: red;
+}
+
+
+/* UTILITY CLASSES */
+.hidden {
+    display: none;
 }
