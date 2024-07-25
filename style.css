@@ -124,7 +124,14 @@ nav {
     align-items: center;
     padding-inline: 2rem;
 
+    box-shadow: 0 2px 15px #0000;
+    margin-bottom: 4rem;
+
+    transition: all 900ms ease;
     height: 60px;
+}
+nav:hover {
+  box-shadow: 0 2px 15px #0002;
 }
 .left-navlink, .middle-navlink, .right-navlink {
     flex: 1;
