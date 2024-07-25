@@ -2,6 +2,7 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
 :root {
+    /* css defined reusable variables for consistency */
     --color-white: #fff;
     --color-black: #000;
 
@@ -11,4 +12,12 @@
 body {
     width: 100%;
 
+    font-family: sans-serif;
+
+}
+
+header,
+main,
+footer {
+    width: 100%;
 }
